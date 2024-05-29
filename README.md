@@ -10,7 +10,8 @@ Project: Build CryptoStar Dapp on Ethereum
     * @openzeppelin/contracts@4.5.0
     * Node v20.13.1
 
-* Token Address on the Rinkeby Network
+* Token Address on the sepolia Network
+https://sepolia.etherscan.io/address/0x31dfadff177b0281a3d23f7afaec1f1ec0061cd0
 
 # Requirements
 

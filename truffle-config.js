@@ -1,6 +1,4 @@
-const HDWalletProvider = require('./app/node_modules/@truffle/hdwallet-provider');
-const infuraKey = "";
-const mnemonic = "";
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 /**
  * Use this file to configure your truffle project. It's seeded with some
@@ -81,12 +79,16 @@ module.exports = {
 
     // Sepolia test network
     sepolia: {
-      provider: () => new HDWalletProvider(mnemonic, `https://sepolia.infura.io/v3/${infuraKey}`),
-        network_id: 11155111,   
-        gas: 30000000,
-        gasPrice: 10000000000,
-        networkCheckTimeout: 10000,
-        timeoutBlocks: 200
+      provider: () => new HDWalletProvider({
+        mnemonic: {
+          phrase: "",
+        },
+        providerOrUrl: '',
+        pollingInterval: 1800000,
+      }),
+      network_id: 11155111,
+      networkCheckTimeout: 8000,
+      deploymentPollingInterval: 1800000,
     },
 
   },
